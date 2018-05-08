@@ -1,0 +1,44 @@
+div.header
+  object.logo(data='./BidWell Report.svg' type="image/svg+xml")
+
+hr#headerLine
+
+div#marketcap
+  h2 Market Cap
+  div#stats
+    h4 Total Market Cap:
+    h4 431 Billion
+    h4 Market Cap Growth:
+    h4 +20 Billion (4.8%)
+    h4 Total Weekly Volume: 168 Billion
+    h4 Weekly Volume Growth: 3 Billion (+2%)
+
+  img#marketCapGraph(src="./weeklyMarketCap.png")
+
+
+div#top100
+  h2 Top 100
+
+div#bluechips
+  h2 Blue Chips
+
+div#tbd
+  h2 TBD
+
+
+style
+    include bidwellreport.css
+
+style(lang="css")
+  :scss
+    body {
+      grid-template-areas:
+        "header header"
+        "marketcap top100"
+        "bluechips tbd";
+      .header { grid-area: header; }
+      #marketcap { grid-area: marketcap; }
+      #top100 { grid-area: top100; }
+      #bluechips { grid-area: bluechips; }
+      #tbd { grid-area: tbd; }
+    }

@@ -1,0 +1,42 @@
+body {
+  display: grid;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#headerLine {
+  border: none;
+  height: 1px;
+  /* Set the hr color */
+  color: #333; /* old IE */
+  background-color: #333;
+}
+
+#marketcap {
+  height: 50vh;
+  text-align: center;
+}
+
+#top100 {
+  height: 50vh;
+  text-align: center;
+}
+
+#bluechips {
+  height: 50vh;
+  text-align: center;
+}
+
+#tbd {
+  height: 50vh;
+  text-align: center;
+}
+
+#stats {
+  text-align: left;
+}
