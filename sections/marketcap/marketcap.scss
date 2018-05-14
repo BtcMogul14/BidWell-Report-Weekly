@@ -3,8 +3,23 @@
   flex-direction: column;
   padding: 10px;
   text-align: center;
+  padding-top: 30px;
 
   p {
-    font-size: 10px;
+    font-size: 12px;
   }
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+#firstHalf {
+  width: 50%;
+}
+
+#secondHalf {
+  width: 50%;
 }
