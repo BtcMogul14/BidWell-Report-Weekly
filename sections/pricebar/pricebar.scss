@@ -1,0 +1,19 @@
+#issue {
+  width: 100%;
+  font-size: 10px;
+  text-align: center;
+}
+
+#pricebarbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 30px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  font-size: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}

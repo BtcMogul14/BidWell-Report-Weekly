@@ -1,0 +1,24 @@
+#top100 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    font-size: 10px;
+  }
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
+}
+
+#gainers {
+  width: 50%;
+  text-align: center;
+}
+
+#losers {
+  width: 50%;
+  text-align: center;
+}
