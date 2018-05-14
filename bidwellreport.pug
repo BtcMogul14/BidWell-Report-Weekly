@@ -1,27 +1,27 @@
 div.header
-  object.logo(data='./BidWell Report.svg' type="image/svg+xml")
+  object.logo(data='./assets/logo.svg' type="image/svg+xml")
 
-include sections/pricebar.pug
+include sections/pricebar/pricebar.pug
 
 
 div#marketcapContent
   include sections/marketcap/marketcap.pug
   
 div#marketcapChartContent
-  include sections/marketcapChart.pug
+  include sections/marketcapChart/marketcapChart.pug
 
 div#bluechips
   include sections/bluechips/bluechips.pug
   
 div#top100Content
-  include sections/top100.pug
+  include sections/top100/top100.pug
   
 div#top100ChartContent
-  include sections/top100Chart.pug
+  include sections/top100Chart/top100Chart.pug
   
 
 div#sectors
-  include sections/sectors.pug
+  include sections/sectors/sectors.pug
 
 div#btcDominance
   include sections/btcDominance/btcDominance.pug
