@@ -1,44 +1,70 @@
 div.header
   object.logo(data='./BidWell Report.svg' type="image/svg+xml")
 
-hr#headerLine
-
-div#marketcap
-  h2 Market Cap
-  div#stats
-    h4 Total Market Cap:
-    h4 431 Billion
-    h4 Market Cap Growth:
-    h4 +20 Billion (4.8%)
-    h4 Total Weekly Volume: 168 Billion
-    h4 Weekly Volume Growth: 3 Billion (+2%)
-
-  img#marketCapGraph(src="./weeklyMarketCap.png")
+include sections/pricebar.pug
 
 
-div#top100
-  h2 Top 100
+div#marketcapContent
+  include sections/marketcap/marketcap.pug
+  
+div#marketcapChartContent
+  include sections/marketcapChart.pug
 
 div#bluechips
-  h2 Blue Chips
+  include sections/bluechips/bluechips.pug
+  
+div#top100Content
+  include sections/top100.pug
+  
+div#top100ChartContent
+  include sections/top100Chart.pug
+  
 
-div#tbd
-  h2 TBD
+div#sectors
+  include sections/sectors.pug
 
+div#btcDominance
+  include sections/btcDominance/btcDominance.pug
+  
+div#transactionVolume
+  include sections/transactionVolume/transactionVolume.pug 
+  
+div#standards
+  include sections/standards/standards.pug
+  
+div#disclaimer
+  include sections/disclosure/disclosure.pug
+  
+div#contact
+  include sections/contact/contact.pug
 
 style
-    include bidwellreport.css
+    include:scss bidwellreport.scss
 
 style(lang="css")
   :scss
     body {
       grid-template-areas:
-        "header header"
-        "marketcap top100"
-        "bluechips tbd";
+        "header header header"
+        "pricebar pricebar pricebar"
+        "marketcap marketcapchart bluechips"
+        "top100chart top100 sectors"
+        "btcDominance transactionVolume standards"
+        "disclaimer disclaimer disclaimer"
+        "contact contact contact";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto 250px 250px 250px auto auto;
       .header { grid-area: header; }
-      #marketcap { grid-area: marketcap; }
-      #top100 { grid-area: top100; }
+      #pricebar {grid-area: pricebar; }
+      #marketcapContent { grid-area: marketcap; }
+      #marketcapChartContent { grid-area: marketcapchart; }
+      #top100Content { grid-area: top100; }
+      #top100ChartContent { grid-area: top100chart;}
       #bluechips { grid-area: bluechips; }
-      #tbd { grid-area: tbd; }
+      #sectors { grid-area: sectors; }
+      #btcDominance { grid-area: btcDominance; }
+      #transactionVolume { grid-area: transactionVolume; }
+      #standards { grid-area: standards; }
+      #disclaimer { grid-area: disclaimer;}
+      #contact {grid-area: contact;}
     }
