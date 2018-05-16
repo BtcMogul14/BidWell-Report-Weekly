@@ -26,8 +26,17 @@ type MarketCapChartData struct {
 	DayV5 int
 	DayV6 int
 	DayV7 int
+	Date1 string
+	Date2 string
+	Date3 string
+	Date4 string
+	Date5 string
+	Date6 string
+	Date7 string
 }
 
+//TODO figure out a good way of formatting the Y axises on the chart so that it never gets too crazy
+//So something like always 5+ the largest number, etc, etc
 //Main function to create the marketcap
 func CreateMarketCapChart() {
 	t := template.New("marketcapchart.tmpl")
@@ -99,6 +108,14 @@ func GetDailyGrowthPastWeek(mccd MarketCapChartData) MarketCapChartData {
 	mccd.DayV5 = int(global.VolumeUsd[4].Amount / BILLION)
 	mccd.DayV6 = int(global.VolumeUsd[5].Amount / BILLION)
 	mccd.DayV7 = int(global.VolumeUsd[6].Amount / BILLION)
+
+	mccd.Date1 = fmt.Sprintf("%d/%d", global.VolumeUsd[0].Time.Month(), global.VolumeUsd[0].Time.Day())
+	mccd.Date2 = fmt.Sprintf("%d/%d", global.VolumeUsd[1].Time.Month(), global.VolumeUsd[1].Time.Day())
+	mccd.Date3 = fmt.Sprintf("%d/%d", global.VolumeUsd[2].Time.Month(), global.VolumeUsd[2].Time.Day())
+	mccd.Date4 = fmt.Sprintf("%d/%d", global.VolumeUsd[3].Time.Month(), global.VolumeUsd[3].Time.Day())
+	mccd.Date5 = fmt.Sprintf("%d/%d", global.VolumeUsd[4].Time.Month(), global.VolumeUsd[4].Time.Day())
+	mccd.Date6 = fmt.Sprintf("%d/%d", global.VolumeUsd[5].Time.Month(), global.VolumeUsd[5].Time.Day())
+	mccd.Date7 = fmt.Sprintf("%d/%d", global.VolumeUsd[6].Time.Month(), global.VolumeUsd[6].Time.Day())
 
 	return mccd
 
