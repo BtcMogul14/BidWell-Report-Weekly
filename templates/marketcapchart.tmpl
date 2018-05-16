@@ -1,0 +1,61 @@
+{
+  type: 'bar',
+  data: {
+    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    datasets: [{
+    yAxisID: 'A',
+    data: [{{ .Day1}}, {{ .Day2}}, {{ .Day3 }}, {{ .Day4 }}, {{ .Day5}}, {{ .Day6}}, {{ .Day7}}]
+    },
+    {
+      yAxisID: 'B',
+      label: 'Filled',
+      backgroundColor: '#ff000022',
+      borderColor: 'red',
+    data: [{{ .DayV1}}, {{ .DayV2}}, {{ .DayV3 }}, {{ .DayV4 }}, {{ .DayV5}}, {{ .DayV6}}, {{ .DayV7}}],
+      fill: false,
+      type: 'line'
+    }]
+  },
+  options: {
+    elements: {
+      point: {
+        radius: 0
+      }
+    },
+    devicePixelRatio: 2,
+    responsive: true,
+    animation: {
+      duration: 0
+    },
+    legend: {
+      display: false
+    },
+    scales: {
+      xAxes: [{
+        display: true,
+        scaleLabel: {
+          display: true,
+          labelString: 'Day'
+        }
+      }],
+      yAxes: [{
+        id: 'A',
+        type: 'linear',
+        position: 'right',
+      },
+      {
+        id: 'B',
+        position: 'left',
+        display: true,
+        ticks: {
+          suggestedMin: 400,
+          suggestedMax: 450
+        },
+        scaleLabel: {
+          display: true,
+          labelString: 'Value'
+        }
+      }]
+    }
+  }
+}
