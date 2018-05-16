@@ -1,0 +1,15 @@
+div#marketcap
+      div#container
+        div#firstHalf
+          p Total Market Cap:
+          p Market Cap Growth: 
+          p Total Weekly Volume:
+          p Weekly Volume Growth:
+        div#secondHalf
+          p {{ .TotalMarketCap}} Billion
+	  p {{ .MarketCapGrowth}}  Billion ({{ .MarketCapGrowthPercentage}}%)
+	  p {{ .TotalWeeklyVolume}} Billion
+	  p {{ .TotalWeeklyVolumeGrowth}} Billion ({{ .TotalWeeklyVolumeGrowthPercentage}}%)
+    
+style
+      include:scss marketcap.scss
