@@ -1,0 +1,42 @@
+
+#sectors{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+#containerSP {
+  display: flex;
+  flex-direction:row;
+}
+
+#graph {
+  display: flex;
+  flex-direction: column;
+  width: 66%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+}
+
+#list {
+  width: 33%;
+}
+
+#showGain {
+  fill: #85bb65;
+}
+
+#showLoss {
+  fill: red;
+}
+
+#noShow {
+  fill: transparent;
+}
+
+}

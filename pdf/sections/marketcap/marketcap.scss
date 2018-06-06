@@ -1,13 +1,22 @@
 #marketcap {
-  display: flex;
-  flex-direction: column;
   padding: 10px;
-  text-align: center;
   padding-top: 30px;
 
   p {
     font-size: 12px;
   }
+}
+
+.odd {
+  background-color: rgba(220,220,220,0.8);
+}
+
+.mcsect {
+  height: 25%;
+}
+
+#sectionTitle {
+  border-bottom: 1px solid #000;
 }
 
 #container {

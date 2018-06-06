@@ -1,0 +1,70 @@
+{
+  type: 'line',
+  data: {
+  labels: ['{{.Day1}}', '{{.Day2}}', '{{.Day3}}', '{{.Day4}}', '{{.Day5}}', '{{.Day6}}', '{{.Day7}}'],
+    datasets: [{
+    data: [{{.Coin1Day1Gain}}, {{.Coin1Day2Gain}}, {{.Coin1Day3Gain}}, {{.Coin1Day4Gain}}, {{.Coin1Day5Gain}}, {{.Coin1Day6Gain}}, {{.Coin1Day7Gain}}],
+    fill: false,
+    label: '{{.Coin1Name}}',
+    borderColor: "#483d8b",
+    },
+    {
+    data: [{{.Coin2Day1Gain}}, {{.Coin2Day2Gain}}, {{.Coin2Day3Gain}}, {{.Coin2Day4Gain}}, {{.Coin2Day5Gain}}, {{.Coin2Day6Gain}}, {{.Coin2Day7Gain}}],
+    fill: false,
+    label: '{{.Coin2Name}}',
+    borderColor: "rgba(247,70,74,1)",
+    },
+    {
+    data: [{{.Coin3Day1Gain}}, {{.Coin3Day2Gain}}, {{.Coin3Day3Gain}}, {{.Coin3Day4Gain}}, {{.Coin3Day5Gain}}, {{.Coin3Day6Gain}}, {{.Coin3Day7Gain}}],
+    fill: false,
+    label: '{{.Coin3Name}}',
+    borderColor: "rgba(70,191,189,1)",
+    },
+    {
+    data: [{{.Loser1Day1Gain}}, {{.Loser1Day2Gain}}, {{.Loser1Day3Gain}}, {{.Loser1Day4Gain}}, {{.Loser1Day5Gain}}, {{.Loser1Day6Gain}}, {{.Loser1Day7Gain}}],
+    fill: false,
+    label: '{{.Loser1Name}}',
+    borderColor: "rgba(77,83,96,1)",
+    },
+    {
+    data: [{{.Loser2Day1Gain}}, {{.Loser2Day2Gain}}, {{.Loser2Day3Gain}}, {{.Loser2Day4Gain}}, {{.Loser2Day5Gain}}, {{.Loser2Day6Gain}}, {{.Loser2Day7Gain}}],
+    fill: false,
+    label: '{{.Loser2Name}}',
+    borderColor: "#800080",
+    },
+    {
+    data: [{{.Loser3Day1Gain}}, {{.Loser3Day2Gain}}, {{.Loser3Day3Gain}}, {{.Loser3Day4Gain}}, {{.Loser3Day5Gain}}, {{.Loser3Day6Gain}}, {{.Loser3Day7Gain}}],
+      fill: false,
+    label: '{{.Loser3Name}}',
+    borderColor: "rgba(253,180,92,1)",
+    }]
+  },
+  options: {
+    elements: {
+      point: {
+        radius: 0
+      }
+    },
+    devicePixelRatio: 2,
+    responsive: true,
+    animation: {
+      duration: 0
+    },
+    legend: {
+      display: true
+    },
+    scales: {
+      xAxes: [{
+        display: true,
+        scaleLabel: {
+          display: true,
+          labelString: 'Day'
+        }
+      }],
+      yAxes: [{
+        type: 'linear',
+        position: 'right',
+      }]
+    }
+  }
+}

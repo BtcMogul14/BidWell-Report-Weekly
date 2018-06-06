@@ -48,6 +48,8 @@ func CreateMarketCapChart() {
 
 	data := GetMarketCapChartData()
 
+	spew.Dump(data)
+
 	f, err := os.Create("./pdf/sections/charts/weeklyMarketCap.chart.js")
 	if err != nil {
 		log.Println("create file: ", err)
@@ -72,8 +74,6 @@ func GetMarketCapChartData() MarketCapChartData {
 
 	data = GetDailyGrowthPastWeek(data)
 
-	spew.Dump(data)
-
 	return data
 
 }
@@ -85,7 +85,7 @@ func GetDailyGrowthPastWeek(mccd MarketCapChartData) MarketCapChartData {
 	start := time.Date(t.Year(), t.Month(), t.Day(), 0, 0, 0, 0, t.Location())
 
 	//So we do last week + 7 days so if this report is released on a Tuesday, we get Monday to Monday
-	end := start.AddDate(0, 0, 7)
+	end := start.AddDate(0, 0, 8)
 
 	global, err := coinmarketcap.GetGlobalHistoricalTicksDailyByDate(start, end)
 

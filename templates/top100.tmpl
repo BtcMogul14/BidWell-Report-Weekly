@@ -1,0 +1,19 @@
+div#top100
+  h2.headline Top 100
+  
+  div#content
+    div#gainers
+      h4 Weekly Top Gainers
+      p {{ .Coin1Name}} ({{.Coin1Slug}}) {{.Coin1Price}} ({{.Coin1PriceGrowthPercentage}})
+      p {{ .Coin2Name}} ({{.Coin2Slug}}) {{.Coin2Price}} ({{.Coin2PriceGrowthPercentage}})
+      p {{ .Coin3Name}} ({{.Coin3Slug}}) {{.Coin3Price}} ({{.Coin3PriceGrowthPercentage}})
+        
+    div#losers
+      h4 Weekly Largest Losers
+      p {{ .Loser1Name}} ({{.Loser1Slug}}) {{.Loser1Price}} ({{.Loser1PriceGrowthPercentage}})
+      p {{ .Loser2Name}} ({{.Loser2Slug}}) {{.Loser2Price}} ({{.Loser2PriceGrowthPercentage}})
+      p {{ .Loser3Name}} ({{.Loser3Slug}}) {{.Loser3Price}} ({{.Loser3PriceGrowthPercentage}})
+  
+  
+style
+  include:scss top100.scss

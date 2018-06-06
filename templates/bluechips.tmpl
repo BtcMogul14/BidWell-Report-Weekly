@@ -1,0 +1,34 @@
+
+div#bluechips
+  div.section
+    div.sectionHeader
+      p <em>Currency</em>
+    p BTC
+    p ETH
+    p XRP
+    p LTC
+  div.section
+    div.sectionHeader
+      p <em>Price</em>
+    p {{.BitcoinPrice}} ({{.BitcoinPriceGrowth}})
+    p {{.EthereumPrice}} ({{.EthereumPriceGrowth}})
+    p {{.RipplePrice}} ({{.RipplePriceGrowth}})
+    p {{.LitecoinPrice}} ({{.LitecoinPriceGrowth}})
+  div.section
+    div.sectionHeader
+      p <em>Market Cap in Billions</em>
+    p {{.BitcoinMarketCap}}
+    p {{.EthereumMarketCap}}
+    p {{.RippleMarketCap}}
+    p {{.LitecoinMarketCap}}
+    
+  div.section
+    div.sectionHeader
+      p <em>Volume in Billions</em>
+    p {{.BitcoinVolume}} ({{.BitcoinVolumeGrowth}})
+    p {{.EthereumVolume}} ({{.EthereumVolumeGrowth}}) 
+    p {{.RippleVolume}} ({{.RippleVolumeGrowth}})
+    p {{.LitecoinVolume}} ({{.LitecoinVolumeGrowth}})
+    
+style
+      include:scss bluechips.scss

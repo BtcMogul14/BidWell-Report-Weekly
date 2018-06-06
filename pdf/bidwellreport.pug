@@ -20,7 +20,7 @@ div#top100ChartContent
   include sections/top100Chart/top100Chart.pug
   
 
-div#sectors
+div#sectorsContent
   include sections/sectors/sectors.pug
 
 div#btcDominance
@@ -28,9 +28,6 @@ div#btcDominance
   
 div#transactionVolume
   include sections/transactionVolume/transactionVolume.pug 
-  
-div#standards
-  include sections/standards/standards.pug
   
 div#disclaimer
   include sections/disclosure/disclosure.pug
@@ -49,7 +46,7 @@ style(lang="css")
         "pricebar pricebar pricebar"
         "marketcap marketcapchart bluechips"
         "top100chart top100 sectors"
-        "btcDominance transactionVolume standards"
+        "btcDominance transactionVolume sectors"
         "disclaimer disclaimer disclaimer"
         "contact contact contact";
         grid-template-columns: 1fr 1fr 1fr;
@@ -61,7 +58,7 @@ style(lang="css")
       #top100Content { grid-area: top100; }
       #top100ChartContent { grid-area: top100chart;}
       #bluechips { grid-area: bluechips; }
-      #sectors { grid-area: sectors; }
+      #sectorsContent { grid-area: sectors; }
       #btcDominance { grid-area: btcDominance; }
       #transactionVolume { grid-area: transactionVolume; }
       #standards { grid-area: standards; }

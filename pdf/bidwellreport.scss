@@ -9,18 +9,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 25px;
 }
 
-#bluechips {
-  height: 50vh;
-  text-align: center;
-}
-
-#tbd {
-  height: 50vh;
-  text-align: center;
-}
-
-#stats {
-  text-align: left;
+body {
+  margin: 0;
+  padding: 0;
 }

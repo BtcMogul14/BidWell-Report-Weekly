@@ -1,0 +1,29 @@
+div#sectors
+  h2 Sector Performance
+
+  div#containerSP
+    div#list
+      {{range .Sectors}}
+      div.row
+        p {{.Name}}
+      {{end}}
+
+    div#graph
+      {{range .Sectors}}
+      {{if .Negative}}
+      div.row
+        svg#showLoss(width="{{.BarWidth}}", height="20")
+          rect(width="{{.BarWidth}}", height="20")
+        svg#noShow(width="{{.BarWidth}}", height="20")
+          rect(width="{{.BarWidth}}", height="20")
+      {{else}}
+      div.row
+        svg#noShow(width="{{.BarWidth}}", height="20")
+          rect(width="{{.BarWidth}}", height="20")
+        svg#showGain(width="{{.BarWidth}}", height="20")
+          rect(width="{{.BarWidth}}", height="20")
+      {{end}}
+      {{end}}
+
+style
+  include:scss sectors.scss

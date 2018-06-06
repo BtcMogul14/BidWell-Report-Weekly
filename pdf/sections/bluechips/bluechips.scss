@@ -1,8 +1,18 @@
 
 #bluechips{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 10px;
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+  }
+
+  .sectionHeader {
+    height: 50px;
+  }
 
   p {
     font-size: 10px;
